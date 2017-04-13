@@ -97,3 +97,12 @@ Zhifei Zhang, Yang Song, and Hairong Qi. "Age Progression/Regression by Conditio
   year={2017}
 }
 ```
+
+## Docker
+docker build -t aging .
+
+docker run -it -v $PWD:/aging aging /bin/bash
+cd /aging
+python main.py
+
+Needed to up docker memory allocation to 8GB as the 2GB default memory allocation caused the python process to be killed.
